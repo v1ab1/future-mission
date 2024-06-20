@@ -1,0 +1,6 @@
+export {Auth} from './Auth'
+export {Main} from './Main'
+export {New} from './New'
+export {AccountSettings} from './AccountSettings'
+export {GamesSettings} from './GamesSettings'
+export {Settings} from './Settings'

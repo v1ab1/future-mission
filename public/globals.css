@@ -1,4 +1,39 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter/Inter-Regular.ttf') format('opentype');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+/* Inter Bold */
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter/Inter-Bold.ttf') format('opentype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+/* Inter Italic */
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter/Inter-Italic.ttf') format('opentype');
+  font-weight: 400; /* Regular Italic */
+  font-style: italic;
+}
+
+/* Inter Bold Italic */
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter/Inter-BoldItalic.ttf') format('opentype');
+  font-weight: 700; /* Bold Italic */
+  font-style: italic;
+}
+
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
 }
