@@ -6,7 +6,7 @@ import {UnhiddenEye} from './UnhiddenEye'
 
 type InputProps = {
   placeholder?: string
-  type?: 'email' | 'password'
+  type?: 'email' | 'password' | 'text'
   className?: string
 }
 

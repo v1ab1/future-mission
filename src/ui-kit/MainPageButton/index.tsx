@@ -13,9 +13,11 @@ import {Arrow} from './Arrow'
 type MainPageButtonProps = {
   type?: 'new' | 'experts' | 'history' | 'settings' | 'games' | 'profile' | 'arrow'
   isGreen?: boolean
+  text?: string
+  onClick?: () => void
 }
 
-export const MainPageButton: FC<MainPageButtonProps> = ({type, isGreen}) => {
+export const MainPageButton: FC<MainPageButtonProps> = ({type, isGreen, text, onClick}) => {
   const c = useStyles()
   const navigate = useNavigate()
 
@@ -38,7 +40,7 @@ export const MainPageButton: FC<MainPageButtonProps> = ({type, isGreen}) => {
     }
   }
 
-  const text = () => {
+  const buttonText = () => {
     switch (type) {
       case 'new':
         return 'Начать занятие'
@@ -81,11 +83,20 @@ export const MainPageButton: FC<MainPageButtonProps> = ({type, isGreen}) => {
   }
 
   return (
-    <button className={cn(c.root, isGreen ? c.green : null)} onClick={go}>
+    <button
+      className={cn(c.root, isGreen ? c.green : null)}
+      onClick={() => {
+        if (onClick) {
+          onClick()
+          return
+        }
+        go()
+      }}
+    >
       <div className={c.logo}>
         <Logo />
       </div>
-      <p className={c.text}>{text()}</p>
+      <p className={c.text}>{text ? text : buttonText()}</p>
     </button>
   )
 }

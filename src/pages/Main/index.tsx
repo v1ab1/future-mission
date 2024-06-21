@@ -22,8 +22,8 @@ const useStyles = createUseStyles({
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    paddingTop: 40,
     boxSizing: 'border-box',
+    minHeight: '90vh',
     gap: 70,
   },
   buttons: {

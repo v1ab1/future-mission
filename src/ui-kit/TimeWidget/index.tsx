@@ -43,7 +43,8 @@ export const TimeWidget = () => {
       <Logo isHalfSized />
       <div>
         <p className={c.time}>
-          {currentTime.getHours()}:{currentTime.getMinutes()}
+          {currentTime.getHours() >= 10 ? currentTime.getHours() : `0${currentTime.getHours()}`}:
+          {currentTime.getMinutes() >= 10 ? currentTime.getMinutes() : `0${currentTime.getMinutes()}`}
         </p>
         <p className={c.date}>
           {daysOfWeek[currentTime.getDay()]}, {currentTime.getDate()} {months[currentTime.getMonth()]}{' '}
