@@ -1,9 +1,10 @@
 import {useEffect, useState} from 'react'
 import {createUseStyles} from 'react-jss'
 import {Logo} from '../Logo'
+import {STATIC_SERVER} from '../../api/API_URL'
 
-export const backgroundDay = 'https://psv4.userapi.com/c909518/u594770123/docs/d60/744a19cbb43f/Fon-3.png'
-export const backgroundNight = 'https://psv4.userapi.com/c909518/u594770123/docs/d13/825c2557e916/Fon.png'
+export const backgroundDay = STATIC_SERVER + 'dayWidget.png'
+export const backgroundNight = STATIC_SERVER + 'nightWidget.png'
 const daysOfWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
 const months = [
   'января',

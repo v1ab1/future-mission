@@ -15,6 +15,7 @@ import {
 } from './pages'
 import {useSelector} from 'react-redux'
 import {RootState} from './storage/store'
+import Test from './pages/Test'
 
 export const App = () => {
   const c = useStyles()
@@ -33,6 +34,7 @@ export const App = () => {
         <Route path='/settings' element={<Settings />} />
         <Route path='/account_settings' element={<AccountSettings />} />
         <Route path='/games_settings' element={<GamesSettings />} />
+        <Route path='/test' element={<Test />} />
       </Routes>
     </div>
   )

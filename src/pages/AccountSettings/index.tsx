@@ -6,12 +6,13 @@ import {AppDispatch, RootState} from '../../storage/store'
 import {useDispatch, useSelector} from 'react-redux'
 import {setAccountData} from '../../storage/accountSlice'
 import {useNavigate} from 'react-router-dom'
+import {STATIC_SERVER} from '../../api/API_URL'
 
 const images = [
-  'https://psv4.userapi.com/c909518/u594770123/docs/d18/dbb1226b0d0c/background1.png',
-  'https://psv4.userapi.com/c909518/u594770123/docs/d34/9d3c1e748174/background2.png',
-  'https://psv4.userapi.com/c909518/u594770123/docs/d18/759dbf6c8c97/background3.png',
-  'https://psv4.userapi.com/c909518/u594770123/docs/d7/6c5a60031268/background4.jpg',
+  STATIC_SERVER + 'skyBackground.png',
+  STATIC_SERVER + 'gameBackground.png',
+  STATIC_SERVER + 'mounthBackground.png',
+  STATIC_SERVER + 'defaultBackground.jpg',
 ]
 
 export const AccountSettings = () => {
